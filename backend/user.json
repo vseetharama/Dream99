@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Google",
+    "logo": "https://logo.clearbit.com/google.com"
+  },
+  {
+    "id": 3,
+    "name": "Amazon",
+    "logo": "https://logo.clearbit.com/amazon.com"
+  },
+  {
+    "id": 11,
+    "name": "NVIDIA",
+    "logo": "https://logo.clearbit.com/nvidia.com"
+  },
+  {
+    "id": 4,
+    "name": "Apple",
+    "logo": "https://logo.clearbit.com/apple.com"
+  },
+  {
+    "id": 19,
+    "name": "Airbnb",
+    "logo": "https://logo.clearbit.com/airbnb.com"
+  },
+  {
+    "id": 2,
+    "name": "Microsoft",
+    "logo": "https://logo.clearbit.com/microsoft.com"
+  }
+]

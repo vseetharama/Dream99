@@ -1,0 +1,183 @@
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* New App Container */
+#app-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    padding: 30px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Main title */
+h1 {
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* Container for selected companies */
+#company-container {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Individual company item */
+.company-item {
+  background-color: #e9efff;
+  border: 1px solid #c6d8ff;
+  border-radius: 25px; /* Pill shape */
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.company-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+/* New: Fallback logo styles */
+.logo-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 12px; /* Default size */
+}
+
+.company-logo.logo-fallback {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+}
+
+.company-logo-small.logo-fallback {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+}
+
+
+/* Delete button (trash can) */
+.delete-btn {
+  background-color: transparent;
+  color: #ff6b6b;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 0;
+  margin-left: 5px;
+}
+.delete-btn:hover {
+    background-color: #ffeded;
+}
+
+
+/* The 'Add companies' button */
+#add-btn {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded rectangle */
+  padding: 12px 20px; /* More padding for text */
+  font-size: 16px; /* Appropriate font size for text */
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#add-btn:disabled {
+  background-color: #a9a9a9; /* Grey out when disabled */
+  cursor: not-allowed;
+}
+
+/* The popup menu */
+#menu {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  margin: 20px auto; /* Center it */
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Class to hide the menu */
+.hidden {
+  display: none;
+}
+
+/* Search input field */
+#search {
+  width: calc(100% - 22px); /* Full width with padding */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* List of companies in the popup */
+#company-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto; /* Add scroll if list is long */
+  text-align: left;
+}
+
+#company-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company-logo-small {
+    width: 20px;
+    height: 20px;
+}
+
+/* Highlight on hover */
+#company-list li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Message for when no companies are selected */
+#empty-msg {
+  color: #888;
+}
