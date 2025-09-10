@@ -52,6 +52,14 @@ app.post("/selected-companies", (req, res) => {
   });
 });
 
+// Ensure companies.json and user.json exist with default content
+if (!fs.existsSync(COMPANIES_FILE)) {
+  fs.writeFileSync(COMPANIES_FILE, JSON.stringify([], null, 2));
+}
+if (!fs.existsSync(USER_SELECTIONS_FILE)) {
+  fs.writeFileSync(USER_SELECTIONS_FILE, JSON.stringify([], null, 2));
+}
+
 // Start server
 app.listen(5000, () => {
   console.log("Backend running on http://localhost:5000");

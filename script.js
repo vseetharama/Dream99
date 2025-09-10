@@ -18,7 +18,7 @@ const container = document.getElementById("company-container");
 const addBtn = document.getElementById("add-btn");
 const menu = document.getElementById("menu");
 const companyList = document.getElementById("company-list");
-const search = document.getElementById("search");
+const searchInput = document.getElementById("search");
 const emptyMsg = document.getElementById("empty-msg");
 
 // =================================================================================
@@ -27,17 +27,14 @@ const emptyMsg = document.getElementById("empty-msg");
 
 addBtn.addEventListener("click", function() {
   menu.classList.toggle("hidden");
-  search.value = "";
+  searchInput.value = "";
   renderMenu(allCompanies); // Show all companies when the menu is opened.
 });
 
-search.addEventListener("input", function() {
-  const searchTerm = search.value.toLowerCase();
-  const filteredCompanies = allCompanies.filter(function(company) {
-    // Search by the company's name property
-    return company.name.toLowerCase().includes(searchTerm);
-  });
-  renderMenu(filteredCompanies);
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  const filtered = allCompanies.filter(c => (c.name || c).toLowerCase().includes(query));
+  renderMenu(filtered);
 });
 
 // =================================================================================
